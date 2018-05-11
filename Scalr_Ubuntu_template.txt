@@ -1,0 +1,63 @@
+{
+    "_meta": {
+        "schema_version": "v1beta0-7.9.0"
+    },
+    "farm": {
+        "name": "GoldenUbuntu1604Image",
+        "description": "",
+        "project": {
+            "id": "30c59dba-fc9b-4d0f-83ec-4b5043b12f72"
+        },
+        "timezone": "Asia\/Kolkata",
+        "launchOrder": "simultaneous",
+        "variables": []
+    },
+    "roles": [
+        {
+            "alias": "MyUbuntu16",
+            "role": {
+                "name": "MyUbuntu16"
+            },
+            "cloudPlatform": "azure",
+            "cloudLocation": "eastus",
+            "availabilityZones": [],
+            "instanceType": {
+                "id": "Basic_A1"
+            },
+            "launchIndex": 0,
+            "advancedConfiguration": {
+                "disableAgentIptablesManagement": false,
+                "disableAgentNtpManagement": false,
+                "rebootAfterHostInit": false
+            },
+            "scaling": {
+                "enabled": true,
+                "maxInstances": 2,
+                "minInstances": 1,
+                "rules": []
+            },
+            "networking": {
+                "networks": [
+                    {
+                        "id": "\/subscriptions\/d78af5f4-5d2d-4141-a725-2088437da0ca\/resourceGroups\/IOTRG\/providers\/Microsoft.Network\/virtualNetworks\/IOTRG-vnet",
+                        "associatePublicIpAddress": true
+                    }
+                ],
+                "subnets": [
+                    {
+                        "id": "\/subscriptions\/d78af5f4-5d2d-4141-a725-2088437da0ca\/resourceGroups\/IOTRG\/providers\/Microsoft.Network\/virtualNetworks\/IOTRG-vnet\/subnets\/default"
+                    }
+                ]
+            },
+            "cloudFeatures": {
+                "type": "AzureCloudFeatures",
+                "resourceGroup": "\/subscriptions\/d78af5f4-5d2d-4141-a725-2088437da0ca\/resourceGroups\/Frontend-P-RG"
+            },
+            "variables": [],
+            "orchestration": {
+                "rules": []
+            },
+            "storage": []
+        }
+    ]
+}
